@@ -1,0 +1,53 @@
+{
+    "dataset": {
+        "dataset_name": "CREMA-D",
+        "data_root": "./dataset/CREMA-D-master"
+    },
+    "output_dir": "results/crema",
+    "visual": {
+        "name": "resnet18"
+    },
+    "text": {
+        "name": "resnet18"
+    },
+    "loss": {
+        "type": "CrossEntropy"
+    },
+    "train": {
+        "epochs": 200,
+        "batch_size": 128,
+        "mixup_alpha": 0.4,
+        "num_workers": 4,
+        "flat_ratio": 0.3,
+        "noise_ratio": 1.0e-5,
+        "noise_ratio_cls": 1.0e-5,
+        "temperature1": 0.5,
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 5e-4,
+            "weight_decay": 1.0e-4
+        },
+        "lr_scheduler": {
+            "type": "cosine",
+            "warmup_epoch": 5,
+            "patience": 50
+        }
+    },
+    "test": {
+        "batch_size": 128,
+        "num_workers": 4
+    },
+    "setting": {
+        "type": "CREMA Classification",
+        "num_class": 6,
+        "num_layers": 10
+    },
+    "head": {
+        "type": "classification"
+    },
+    "seed": 42,
+    "gpu_id": "0",
+    "image_res": 224,
+    "debug": false,
+    "fps": 1
+}
