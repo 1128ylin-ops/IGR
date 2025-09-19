@@ -5,7 +5,9 @@
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ---
-
+## 🏗️ Model Architecture
+![Framework](/framework.png)
+---
 ## ⚙️ Requirements
 ```bash
 pip install -r requirements.txt
@@ -26,5 +28,3 @@ python crema.py
 
 ---
 
-## 🏗️ Model Architecture
-![Framework](/framework.png)
